@@ -1,0 +1,23 @@
+[33mcommit f7718ef1ccdf37aae762fa417baaf4a9f122a240[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: ronCohen2 <ronc665@gmail.com>
+Date:   Fri Nov 1 22:09:20 2019 +0200
+
+    implement get method
+
+[33mcommit 8229145012f17c5d215db28363d98d1931ef8d66[m
+Author: ronCohen2 <ronc665@gmail.com>
+Date:   Fri Nov 1 21:52:55 2019 +0200
+
+    implement shift/unshift
+
+[33mcommit 8c42a10d5a1dd13282b811e179e24f648ac2bd70[m
+Author: ronCohen2 <ronc665@gmail.com>
+Date:   Fri Nov 1 21:31:34 2019 +0200
+
+    finish push/pop method
+
+[33mcommit 23743d767181b9480a280e42cbc784c502aa333b[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: ronCohen2 <ronc665@gmail.com>
+Date:   Fri Nov 1 11:54:32 2019 +0200
+
+    initial Commit

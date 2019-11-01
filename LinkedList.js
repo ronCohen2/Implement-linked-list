@@ -69,8 +69,32 @@ class LinkedList {
       current = current.next;
       counter++;
     }
-    return current.value;
+    return current;
   }
+  insert(index, value) {
+    if (index > this.length || index < 0) return false;
+    if (index === 0) return this.unshift(value);
+    if (index === this.length) return this.push(value);
+    const newNode = new Node(value);
+    const prev = this.get(index - 1);
+    const temp = prev.next;
+    prev.next = newNode;
+    newNode.next = temp;
+    this.length++;
+    return true;
+  }
+  remove(index) {
+    if (index < 0 || index >= this.length) return undefined;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+    var previousNode = this.get(index - 1);
+    var removed = previousNode.next;
+    previousNode.next = removed.next;
+    this.length--;
+    return removed;
+  }
+  reverse() {}
+  
 }
 
 let list = new LinkedList();
@@ -85,4 +109,6 @@ list.push("3");
 // list.unshift(2);
 // console.log(list);
 // console.log("is");
-console.log(list.get(2));
+// console.log(list.get(2));
+console.log(list.insert(0, "555"));
+console.log(list);
