@@ -40,12 +40,32 @@ class LinkedList {
     return current;
   }
   shift() {
-  if(!this.head) return undefined
-  
+    if (!this.head) return undefined;
+    const first = this.head;
+    this.head = first.next;
+    this.length--;
+    if (this.length === 0) {
+      this.tail = null;
+    }
+    return first;
+  }
+  unshift(value) {
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    }
+    let newNode = new Node(value);
+    let cuurent = this.head;
+    this.head = newNode;
+    this.head.next = cuurent;
+    this.length++;
+    return this;
+  }
 }
-
 let list = new LinkedList();
 list.push("1");
 list.push("2");
-list.pop();
+// list.pop();
+// list.shift();
+list.unshift(2);
 console.log(list);
