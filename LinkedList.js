@@ -61,11 +61,28 @@ class LinkedList {
     this.length++;
     return this;
   }
+  get(index) {
+    if (index < 0 || index > this.length) return undefined;
+    let counter = 0;
+    let current = this.head;
+    while (counter !== index) {
+      current = current.next;
+      counter++;
+    }
+    return current.value;
+  }
 }
+
 let list = new LinkedList();
 list.push("1");
 list.push("2");
+list.push("3");
+// list.push("4");
+// list.push("5");
+
 // list.pop();
 // list.shift();
-list.unshift(2);
-console.log(list);
+// list.unshift(2);
+// console.log(list);
+// console.log("is");
+console.log(list.get(2));
